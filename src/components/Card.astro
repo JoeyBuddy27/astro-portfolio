@@ -12,7 +12,8 @@ const {
 	date,
 	imagePath,
 	altText,
-	imageClass
+	imageClass,
+	useIcon
 } = Astro.props
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif}')
 
@@ -40,6 +41,17 @@ if (imagePath) {
 			/>
 		)
 	}
+	{
+		useIcon && (
+			<div class={cn('mb-3 hidden md:absolute md:mb-0 md:block', imageClass)}>
+				<span class='flex items-center'>
+					<span class='absolute inline-flex h-3 w-3 animate-ping rounded-full border border-green-400 bg-green-400 opacity-75' />
+					<span class='relative inline-flex h-3 w-3 rounded-full bg-green-400' />
+				</span>
+			</div>
+		)
+	}
+
 	<div class='flex flex-col gap-y-1.5'>
 		<div class='flex flex-col gap-y-0.5'>
 			<h1 class='text-lg font-medium'>{heading}</h1>

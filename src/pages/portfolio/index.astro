@@ -1,0 +1,57 @@
+---
+import PageLayout from '../../layouts/BaseLayout.astro'
+import Portfolio from '@/components/portfolio.jsx'
+
+// import isDarkModeEnabled from '@/components/ThemeProvider.astro'
+
+// TODO: Edit these
+
+// TODO: .env not working
+
+const apiKey = '$2a$10$.i6OSz1qYvSb5dL/lQcQq.GbRKV/Wsw7gxMtxCLnH8GZ7JxChtmHS'
+const apiUrl = `https://api.jsonbin.io/v3/b/65eb4a2c1f5677401f3a62df`
+//api.jsonbin.io/v3/b/65eb4a2c1f5677401f3a62df
+
+// let allData: any = []
+
+// const response = await fetch(apiUrl, {
+// 	method: 'GET',
+// 	headers: {
+// 		'Content-Type': 'application/json',
+// 		'X-Access-Key': apiKey,
+// 		'Access-Control-Allow-Origin': '*'
+// 	}
+// })
+// 	.then((response) => {
+// 		if (!response.ok) {
+// 			throw new Error(`HTTP error! Status: ${response.status}`)
+// 		}
+// 		return response.json()
+// 	})
+// 	.then((data) => {
+// 		allData = data?.record
+// 		console.log('data', data)
+// 	})
+// 	.catch((error) => {
+// 		console.error('Error fetching data:', error)
+// 	})
+
+// const allTypes = allData?.map((item: any) => item?.type)
+// const uniqueTypes = [...new Set(allTypes)]
+
+// console.log('uniqueTypes', uniqueTypes)
+
+// const filterByType = (type: string) => {
+// 	const filteredData = allData?.filter((item: any) => item?.type === type)
+// 	console.log('filteredData', filteredData)
+// 	console.log('hi')
+// }
+
+// const MAX_POSTS = 10
+// const allPosts = await getAllPosts()
+// const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
+---
+
+<PageLayout meta={{ title: "Portfolio - Joe O'Brien" }}>
+	<Portfolio client:visible />
+</PageLayout>
