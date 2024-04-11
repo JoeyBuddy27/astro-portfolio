@@ -60,7 +60,17 @@ const config = {
 			},
 			fontFamily: {
 				sans: [...fontFamily.sans],
-				satoshi: ['Satoshi', 'sans'],
+				satoshi: ['Satoshi', 'sans']
+			},
+			animation: {
+				'slow-pulse': 'pulse 6s ease-in'
+			},
+			keyframes: {
+				slowPulse: {
+					'0%': { opacity: '0.5' },
+					'25%': { opacity: '1' },
+					'100%': { opacity: '0.1' }
+				}
 			}
 		}
 	}

@@ -20,7 +20,7 @@ try {
 		throw new Error(`HTTP error! Status: ${response.status}`)
 	}
 	const data = await response.json()
-	originalData = data.record
+	originalData = data.record.filter((item) => !item.hide)
 } catch (error) {
 	console.error('Error fetching data:', error)
 }
@@ -96,20 +96,18 @@ const Portfolio = () => {
 				<div>
 					<div className='grid scroll-p-10 grid-cols-1 gap-4 md:grid-cols-3'>
 						{allData.map((portfolioItem, index) => (
-							<>
-								<ProjectCard
-									client:load
-									key={`portfolio_${index + 1}`}
-									link={portfolioItem?.link}
-									index={index}
-									heading={portfolioItem?.title}
-									subheading={portfolioItem?.short}
-									imagePath={portfolioItem?.image?.[0]}
-									altText={portfolioItem?.title}
-									className='w-full'
-									type={portfolioItem?.type}
-								/>
-							</>
+							<ProjectCard
+								client:visible
+								key={`portfolio_${index + 1}`}
+								link={portfolioItem?.link}
+								index={index}
+								heading={portfolioItem?.title}
+								subheading={portfolioItem?.short}
+								imagePath={portfolioItem?.image}
+								altText={portfolioItem?.alt}
+								className='w-full'
+								type={portfolioItem?.type}
+							/>
 						))}
 					</div>
 				</div>

@@ -46,5 +46,11 @@ export default defineConfig({
 	output: 'server',
 	adapter: vercel({
 		webAnalytics: { enabled: true }
-	})
+	}),
+	vite: {
+		ssr: {
+			// Add npm packages containing invalid code here
+			noExternal: ['lil-gui']
+		}
+	}
 })
