@@ -43,8 +43,8 @@ export default defineConfig({
 		}
 	},
 	prefetch: true,
-	output: 'server',
-	adapter: vercel(),
+	// output: 'server',
+	// adapter: vercel(),
 	vite: {
 		ssr: {
 			// Add npm packages containing invalid code here
