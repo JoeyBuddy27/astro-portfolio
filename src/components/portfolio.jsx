@@ -34,28 +34,28 @@ const Portfolio = () => {
 	// 	setAllData(originalData)
 	// }, [])
 
-	const apiKey = '$2a$10$.i6OSz1qYvSb5dL/lQcQq.GbRKV/Wsw7gxMtxCLnH8GZ7JxChtmHS'
-	const apiUrl = `https://api.jsonbin.io/v3/b/65eb4a2c1f5677401f3a62df`
+	// const apiKey = '$2a$10$.i6OSz1qYvSb5dL/lQcQq.GbRKV/Wsw7gxMtxCLnH8GZ7JxChtmHS'
+	// const apiUrl = `https://api.jsonbin.io/v3/b/65eb4a2c1f5677401f3a62df`
 
-	useEffect(async () => {
-		try {
-			const response = await fetch(apiUrl, {
-				method: 'GET',
-				headers: {
-					'Content-Type': 'application/json',
-					'X-Access-Key': apiKey,
-					'Access-Control-Allow-Origin': '*'
-				}
-			})
-			if (!response.ok) {
-				throw new Error(`HTTP error! Status: ${response.status}`)
-			}
-			const data = await response.json()
-			setAllData(data.record)
-		} catch (error) {
-			console.error('Error fetching data:', error)
-		}
-	}, []) // Empty dep
+	// useEffect(async () => {
+	// 	try {
+	// 		const response = await fetch(apiUrl, {
+	// 			method: 'GET',
+	// 			headers: {
+	// 				'Content-Type': 'application/json',
+	// 				'X-Access-Key': apiKey,
+	// 				'Access-Control-Allow-Origin': '*'
+	// 			}
+	// 		})
+	// 		if (!response.ok) {
+	// 			throw new Error(`HTTP error! Status: ${response.status}`)
+	// 		}
+	// 		const data = await response.json()
+	// 		setAllData(data.record)
+	// 	} catch (error) {
+	// 		console.error('Error fetching data:', error)
+	// 	}
+	// }, []) // Empty dep
 
 	const uniqueTypes = ['All', ...new Set(originalData?.map((item) => item.type))]
 
