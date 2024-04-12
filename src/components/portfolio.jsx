@@ -89,7 +89,7 @@ const Portfolio = () => {
 							<div
 								key={index}
 								className={cn(
-									'cursor-pointer transition delay-200 ease-in-out',
+									'cursor-pointer transition-all delay-200 duration-200 ease-in-out hover:text-green-400',
 									activeType === type && 'text-green-400'
 								)}
 								onClick={() => filterByType(type)}
