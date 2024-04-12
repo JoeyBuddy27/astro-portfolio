@@ -2,11 +2,10 @@
 import { cn } from '@/utils'
 
 const activeLink = Astro?.url?.pathname?.replace('/', '')
-console.log('activeLink:', activeLink)
 
 const links = [
-	{ href: '/tools', label: 'Tools' },
-	{ href: '/portfolio', label: 'Portfolio' }
+	{ href: '/tools', label: 'tools' },
+	{ href: '/portfolio', label: 'portfolio' }
 ]
 ---
 
@@ -80,16 +79,27 @@ const links = [
 	</nav>
 </header>
 
-<script>
+<script is:inline>
 	function getCurrentTheme() {
+		console.log('theme:', localStorage.getItem('theme'))
 		return localStorage.getItem('theme')
 	}
-	const toggleDarkModeButton = document.getElementById('toggleDarkMode')
 
-	toggleDarkModeButton?.addEventListener('click', () => {
+	function handleThemeToggle() {
 		const toggleDarkModeEvent = new CustomEvent('theme-change', {
 			detail: { theme: getCurrentTheme() === 'light' ? 'dark' : 'light' }
 		})
 		document.dispatchEvent(toggleDarkModeEvent)
+	}
+
+	function initializeThemeToggle() {
+		const toggleDarkModeButton = document.getElementById('toggleDarkMode')
+		toggleDarkModeButton?.addEventListener('click', handleThemeToggle)
+	}
+
+	initializeThemeToggle()
+
+	document.addEventListener('astro:after-swap', () => {
+		initializeThemeToggle()
 	})
 </script>

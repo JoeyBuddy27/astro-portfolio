@@ -46,7 +46,10 @@ function ProjectCard({
 			id={`portfolio-${index + 1}`}
 		>
 			{/* TODO: Make this a slider? */}
-			<a href={imagePath[0]}>
+			<a
+				href={useShortDesc ? `/portfolio/#portfolio-${index + 1}` : link}
+				target={useShortDesc ? '_self' : '_blank'}
+			>
 				<img
 					key={`image-${imageIndex}-${heading}`}
 					src={imagePath[imageIndex]}
