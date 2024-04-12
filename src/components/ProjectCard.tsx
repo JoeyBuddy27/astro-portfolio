@@ -6,10 +6,10 @@ type ProjectCardProps = {
 	className?: string
 	subheading: string
 	imagePath: string[]
-	altText?: string[]
+	altText: string[]
 	link?: string
 	useShortDesc?: boolean
-	index?: number
+	index: number
 }
 
 function ProjectCard({
@@ -46,7 +46,7 @@ function ProjectCard({
 			id={`portfolio-${index + 1}`}
 		>
 			<a
-				href={useShortDesc ? `/portfolio/#portfolio-${index + 1}` : link}
+				href={useShortDesc ? `/portfolio/#portfolio-${index + 1}` : link ? link : '#'}
 				target={useShortDesc ? '_self' : '_blank'}
 			>
 				<img
