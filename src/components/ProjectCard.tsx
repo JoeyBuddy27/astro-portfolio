@@ -52,7 +52,7 @@ function ProjectCard({
 					src={imagePath[imageIndex]}
 					alt={altText?.[imageIndex] || ''}
 					// animate-slow-pulse
-					className={` h-48 w-full rounded-2xl rounded-bl-none rounded-br-none object-cover`}
+					className={` h-60 w-full rounded-2xl rounded-bl-none rounded-br-none object-cover`}
 					// style={{ opacity: imagePath.length === 1 ? 1 : opacity }}
 				/>
 			</a>
