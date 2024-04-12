@@ -51,37 +51,37 @@ const DEVELOPMENT = [
 		href: 'https://chat.openai.com/',
 		iconPath: 'chatgpt',
 		iconBgColour: '#06A67F'
+	},
+	{
+		name: 'React',
+		description: 'Version Control',
+		href: 'https://reactjs.org/',
+		iconPath: 'react',
+		iconBgColour: '#61DAFB'
+	},
+	{
+		name: 'Github',
+		description: 'Version Control',
+		href: 'https://github.org/',
+		iconPath: 'github-mark-white',
+		iconBgColour: '#61DAFB'
 	}
+	// TO ADD git hub / azure
+	// TODO: Copy skills section instead?
 ]
 ---
 
 <PageLayout meta={{ title: 'Home' }}>
-	<div class='w-full'>
-		<Button title='Back' href='/' style='button'>
-			<svg
-				xmlns='http://www.w3.org/2000/svg'
-				width='14'
-				height='14'
-				viewBox='0 0 24 24'
-				slot='icon-before'
-			>
-				<path
-					fill='currentColor'
-					d='m6.921 12.5l5.792 5.792L12 19l-7-7l7-7l.713.708L6.921 11.5H19v1z'
-				>
-				</path>
-			</svg>
-		</Button>
-
+	<div class='w-full flex-1'>
 		<div class='mt-5 flex w-full flex-col gap-y-10'>
 			<div>
 				<h1 class='mb-1 text-2xl font-bold'>Tools</h1>
 				<p>Tools and software I use daily</p>
 			</div>
 
+			<ToolSection title='Development' tools={DEVELOPMENT} />
 			<ToolSection title='Design' tools={DESIGN} />
 			<ToolSection title='Productivity' tools={PRODUCTIVITY} />
-			<ToolSection title='Development' tools={DEVELOPMENT} />
 		</div>
 	</div>
 </PageLayout>

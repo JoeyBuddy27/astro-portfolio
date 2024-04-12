@@ -1,0 +1,68 @@
+---
+import PageLayout from '../../layouts/BaseLayout.astro'
+import bio from '../../assets/bio.jpg'
+import { Image } from 'astro:assets'
+import kilkee from '../../assets/kilkee.jpg'
+---
+
+<!-- TODO: Add full bio here and some contact details -->
+<PageLayout meta={{ title: "About - Joe O'Brien" }}>
+	<div class="'flex-1">
+		<div class='mt-5 flex w-full gap-y-10'>
+			<section class='flex flex-col gap-y-7'>
+				<div class='flex flex-col md:flex-row'>
+					<div class='basis-3/5 gap-y-4'>
+						<h1 class='mb-5 text-3xl font-bold'>About</h1>
+						<p class='text-muted-foreground'>
+							Hey! I’m Joe - an Irish-born, but now Bristol-based software developer. I have a 1st
+							class honours M.Sc. in Interactive Media and B.Sc. in Digital Media Design.
+						</p>
+						<p class='mt-4 text-muted-foreground'>
+							I have been a frontend developer at Golfbreaks in Windsor since August 2021. I am
+							primarily working with React/Typescript and VUE JS on 2 major web projects. We have
+							also been developing a mobile app with React Native since 2023, and I have gotten some
+							experience with Node JS as well.
+						</p>
+						<p class='mt-4 text-muted-foreground'>
+							In addition to my web development career, I also have 5 years experience in the Cinema
+							Industry, starting from cinema host, working my way up through Cinema Experience
+							Manager to Film Booker. Although not strictly relevant to development, these jobs gave
+							me vital experience in leadership roles, and working as part of large teams.
+						</p>
+					</div>
+					<!-- TODO: Photo here? -->
+					<div class='basis-2/5 pr-0 md:p-5'>
+						<Image
+							src={bio}
+							alt='bio'
+							class='w-100 mt-10 h-auto rounded-xl md:m-10 md:mt-0'
+							loading='eager'
+						/>
+					</div>
+				</div>
+				<div class='w-100 mt-5 flex flex-col md:flex-row'>
+					<div class='order-2 basis-4/5 md:order-1 md:basis-3/5'>
+						<Image
+							src={kilkee}
+							alt='kilkee'
+							class='w-100 mt-10 h-auto rounded-xl md:mt-0'
+							loading='eager'
+						/>
+					</div>
+					<div class='order-1 basis-1/5 text-left md:order-2 md:ml-8 md:basis-2/5'>
+						<h1 class='mb-5 mt-10 text-3xl font-bold md:mt-0'>Contact</h1>
+						<p class='text-muted-foreground'>Feel free to get in touch</p>
+						<ul class='-foreground'>
+							<li>
+								<a href='mailto:joedigitalmedia@gmail.com'>joedigitalmedia@gmail.com</a>
+							</li>
+							<li>
+								<a href='tel:07828716124'>07828 716 124</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div></PageLayout
+>

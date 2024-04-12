@@ -22,7 +22,7 @@ function ProjectCard({
 	useShortDesc,
 	index
 }: ProjectCardProps) {
-	const [imageIndex, setImageIndex] = React.useState(0)
+	// const [imageIndex, setImageIndex] = React.useState(0)
 	// console.log('imagePath', imagePath)
 
 	// React.useEffect(() => {
@@ -51,9 +51,9 @@ function ProjectCard({
 				target={useShortDesc ? '_self' : '_blank'}
 			>
 				<img
-					key={`image-${imageIndex}-${heading}`}
-					src={imagePath[imageIndex]}
-					alt={altText?.[imageIndex] || ''}
+					key={`image-${0}-${heading}`}
+					src={imagePath[0]}
+					alt={altText?.[0] || ''}
 					// animate-slow-pulse
 					className={` h-60 w-full rounded-2xl rounded-bl-none rounded-br-none object-cover`}
 					// style={{ opacity: imagePath.length === 1 ? 1 : opacity }}

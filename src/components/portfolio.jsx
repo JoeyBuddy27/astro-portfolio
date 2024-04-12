@@ -26,9 +26,13 @@ try {
 }
 
 const Portfolio = () => {
-	const [allData, setAllData] = useState(originalData)
-	const [allOriginalData, setAllOriginalData] = useState([])
+	// const originalDataCopy = originalData || []
+	const [allData, setAllData] = useState([])
 	const [activeType, setActiveType] = useState('All')
+
+	useEffect(() => {
+		setAllData(originalData)
+	}, [])
 
 	// useEffect(async () => {
 	// 	try {
@@ -70,13 +74,13 @@ const Portfolio = () => {
 	}
 
 	return (
-		<div className='flex w-full scroll-p-10 flex-col gap-y-10'>
-			<section className='flex flex-col items-center gap-y-7'>
-				<div className='flex flex-col items-center gap-y-4'>
-					<h1 className='text-3xl font-bold'>Portfolio</h1>
+		<div className='mt-5 flex w-full flex-1 flex-col gap-y-10'>
+			<section className='flex flex-col  gap-y-7'>
+				<div>
+					<h1 class='mb-1 text-2xl font-bold'>Portfolio</h1>
+					<p>Some bits I've done</p>
 				</div>
 				<div className='flex flex-col items-center gap-y-4'>
-					{/* <h2 className='text-xl font-bold'>Filter by type</h2> */}
 					<div className='flex flex-row items-center gap-x-4'>
 						{/* TODO: style better */}
 						{uniqueTypes.map((type, index) => (

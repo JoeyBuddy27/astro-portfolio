@@ -4,8 +4,10 @@ import { cn } from '@/utils'
 const activeLink = Astro?.url?.pathname?.replace('/', '')
 
 const links = [
-	{ href: '/tools', label: 'tools' },
-	{ href: '/portfolio', label: 'portfolio' }
+	{ href: '/portfolio', label: 'portfolio' },
+	// TODO: Add back in when done
+	// { href: '/tools', label: 'tools' },
+	{ href: '/about', label: 'about' }
 ]
 ---
 
@@ -23,12 +25,6 @@ const links = [
 		>
 
 		<div class='flex flex-row items-center justify-center gap-x-5 sm:gap-x-7'>
-			<!-- <a
-				href='/blog'
-				class='flex-none text-[1.05rem] font-medium hover:text-foreground/75'
-				aria-label='Nav Menu Item'
-				>Blog
-			</a> -->
 			{
 				links.map((link) => (
 					<a
@@ -43,9 +39,6 @@ const links = [
 					</a>
 				))
 			}
-
-			<!-- TODO: Add About page -->
-			<!-- TODO: add portfolio page -->
 
 			<button
 				id='toggleDarkMode'
@@ -80,7 +73,7 @@ const links = [
 </header>
 
 <script is:inline>
-	function getCurrentTheme() {
+	export function getCurrentTheme() {
 		console.log('theme:', localStorage.getItem('theme'))
 		return localStorage.getItem('theme')
 	}
