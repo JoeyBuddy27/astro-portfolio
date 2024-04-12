@@ -44,7 +44,9 @@ export default defineConfig({
 	},
 	prefetch: true,
 	output: 'server',
-	adapter: vercel(),
+	adapter: vercel({
+		imageService: true
+	}),
 	vite: {
 		ssr: {
 			// Add npm packages containing invalid code here
