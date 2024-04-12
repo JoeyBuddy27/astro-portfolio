@@ -97,7 +97,7 @@ const Portfolio = () => {
 					<div className='grid scroll-p-10 grid-cols-1 gap-4 md:grid-cols-3'>
 						{allData.map((portfolioItem, index) => (
 							<ProjectCard
-								client:visible
+								client:load
 								key={`portfolio_${index + 1}`}
 								link={portfolioItem?.link}
 								index={index}

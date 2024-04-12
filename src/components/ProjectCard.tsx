@@ -34,7 +34,7 @@ function ProjectCard({
 	// 	return () => clearInterval(interval)
 	// }, [])
 
-	const [opacity, setOpacity] = React.useState(1)
+	// const [opacity, setOpacity] = React.useState(1)
 
 	return (
 		<div
