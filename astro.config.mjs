@@ -13,7 +13,7 @@ import vercel from '@astrojs/vercel/serverless'
 
 // https://astro.build/config
 export default defineConfig({
-	// site: 'https://joeybuddy27.github.io',
+	site: 'https://astro-portfolio-three-zeta.vercel.app/',
 	// base: '/astro-portfolio',
 	integrations: [
 		expressiveCode(expressiveCodeOptions),
@@ -43,11 +43,8 @@ export default defineConfig({
 		}
 	},
 	prefetch: true,
-	output: 'hybrid',
-	outdir: 'dist',
-	adapter: vercel({
-		imageService: true
-	}),
+	output: 'server',
+	adapter: vercel(),
 	vite: {
 		ssr: {
 			// Add npm packages containing invalid code here
