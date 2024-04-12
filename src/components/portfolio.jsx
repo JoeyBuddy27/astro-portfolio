@@ -27,35 +27,37 @@ try {
 
 const Portfolio = () => {
 	// const originalDataCopy = originalData || []
-	const [allData, setAllData] = useState([])
+	const [allData, setAllData] = useState(originalData)
 	const [activeType, setActiveType] = useState('All')
 
-	useEffect(() => {
-		setAllData(originalData)
-	}, [])
+	// useEffect(() => {
+	// 	setAllData(originalData)
+	// }, [])
 
-	// useEffect(async () => {
-	// 	try {
-	// 		const response = await fetch(apiUrl, {
-	// 			method: 'GET',
-	// 			headers: {
-	// 				'Content-Type': 'application/json',
-	// 				'X-Access-Key': apiKey,
-	// 				'Access-Control-Allow-Origin': '*'
-	// 			}
-	// 		})
-	// 		if (!response.ok) {
-	// 			throw new Error(`HTTP error! Status: ${response.status}`)
-	// 		}
-	// 		const data = await response.json()
-	// 		setAllData(data.record)
-	// 	} catch (error) {
-	// 		console.error('Error fetching data:', error)
-	// 	}
-	// }, []) // Empty dep
+	const apiKey = '$2a$10$.i6OSz1qYvSb5dL/lQcQq.GbRKV/Wsw7gxMtxCLnH8GZ7JxChtmHS'
+	const apiUrl = `https://api.jsonbin.io/v3/b/65eb4a2c1f5677401f3a62df`
 
-	// const [uniqueTypes, setUniqueTypes] = useState([])
-	const uniqueTypes = ['All', ...new Set(originalData.map((item) => item.type))]
+	useEffect(async () => {
+		try {
+			const response = await fetch(apiUrl, {
+				method: 'GET',
+				headers: {
+					'Content-Type': 'application/json',
+					'X-Access-Key': apiKey,
+					'Access-Control-Allow-Origin': '*'
+				}
+			})
+			if (!response.ok) {
+				throw new Error(`HTTP error! Status: ${response.status}`)
+			}
+			const data = await response.json()
+			setAllData(data.record)
+		} catch (error) {
+			console.error('Error fetching data:', error)
+		}
+	}, []) // Empty dep
+
+	const uniqueTypes = ['All', ...new Set(originalData?.map((item) => item.type))]
 
 	// useEffect(() => {
 	// 	if (allData.length) {
@@ -99,9 +101,9 @@ const Portfolio = () => {
 				</div>
 				<div>
 					<div className='grid scroll-p-10 grid-cols-1 gap-4 md:grid-cols-3'>
-						{allData.map((portfolioItem, index) => (
+						{allData?.map((portfolioItem, index) => (
 							<ProjectCard
-								client:load
+								client:visible
 								key={`portfolio_${index + 1}`}
 								link={portfolioItem?.link}
 								index={index}

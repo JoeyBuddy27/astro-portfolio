@@ -20,6 +20,32 @@ const software = ['vscode', 'git', 'figma', 'photoshop']
 
 let allData: any = []
 
+const apiKey = '$2a$10$.i6OSz1qYvSb5dL/lQcQq.GbRKV/Wsw7gxMtxCLnH8GZ7JxChtmHS'
+const apiUrl = `https://api.jsonbin.io/v3/b/65eb4a2c1f5677401f3a62df`
+//api.jsonbin.io/v3/b/65eb4a2c1f5677401f3a62df
+
+const response = await fetch(apiUrl, {
+	method: 'GET',
+	headers: {
+		'Content-Type': 'application/json',
+		'X-Access-Key': apiKey,
+		'Access-Control-Allow-Origin': '*'
+	}
+})
+	.then((response) => {
+		if (!response.ok) {
+			throw new Error(`HTTP error! Status: ${response.status}`)
+		}
+		return response.json()
+	})
+	.then((data) => {
+		allData = data?.record?.filter((item: any) => !item.hide)
+		console.log('data', data)
+	})
+	.catch((error) => {
+		console.error('Error fetching data:', error)
+	})
+
 const experience: any[] = [
 	{
 		location: 'Golfbreaks',
@@ -177,10 +203,6 @@ const education = [
 
 		<Section title='Projects'>
 			<div class='flex flex-col gap-y-3 sm:flex-row sm:gap-x-3 sm:gap-y-0'>
-				<!-- TODO: Add View more button? -->
-				<!-- TODO: Add Github link etc to this -->
-				<!-- TODO: Slice it? -->
-				<!-- TODO: Make these open modal or something?? -->
 				{
 					allData
 						?.slice(0, 2)

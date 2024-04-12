@@ -73,7 +73,7 @@ const links = [
 </header>
 
 <script is:inline>
-	export function getCurrentTheme() {
+	function getCurrentTheme() {
 		console.log('theme:', localStorage.getItem('theme'))
 		return localStorage.getItem('theme')
 	}

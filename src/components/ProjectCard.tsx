@@ -9,7 +9,7 @@ type ProjectCardProps = {
 	altText?: string[]
 	link?: string
 	useShortDesc?: boolean
-	index: number
+	index?: number
 }
 
 function ProjectCard({
@@ -45,7 +45,6 @@ function ProjectCard({
 			)}
 			id={`portfolio-${index + 1}`}
 		>
-			{/* TODO: Make this a slider? */}
 			<a
 				href={useShortDesc ? `/portfolio/#portfolio-${index + 1}` : link}
 				target={useShortDesc ? '_self' : '_blank'}
