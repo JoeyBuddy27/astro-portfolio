@@ -43,7 +43,7 @@ export default defineConfig({
 		}
 	},
 	prefetch: true,
-	output: 'server',
+	output: 'hybrid',
 	adapter: vercel({
 		imageService: true
 	}),
