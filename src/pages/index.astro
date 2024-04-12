@@ -91,12 +91,9 @@ const education = [
 	<div class='flex w-full flex-col gap-y-10'>
 		<section class='flex flex-col items-center gap-y-7'>
 			<!-- TODO: Replace with GitHUb image? -->
-			<Image
-				src={profoPic}
-				alt='profile photo'
-				class='h-28 w-auto rounded-full bg-[#5A6791] p-0'
-				loading='eager'
-			/>
+			<div class='h-28 w-28 overflow-hidden rounded-full'>
+				<Image src={profoPic} alt='profile photo' class='scale-125 object-top' loading='eager' />
+			</div>
 
 			<div class='flex flex-col items-center gap-y-4'>
 				<h1 class='text-3xl font-bold'>Joe O'Brien - Software Developer</h1>
