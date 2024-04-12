@@ -79,7 +79,7 @@ const Portfolio = () => {
 		<div className='mt-5 flex w-full flex-1 flex-col gap-y-10'>
 			<section className='flex flex-col  gap-y-7'>
 				<div>
-					<h1 class='mb-1 text-2xl font-bold'>Portfolio</h1>
+					<h1 className='mb-1 text-2xl font-bold'>Portfolio</h1>
 					<p>Some bits I've done</p>
 				</div>
 				<div className='flex flex-col items-center gap-y-4'>

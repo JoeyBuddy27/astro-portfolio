@@ -40,7 +40,6 @@ const response = await fetch(apiUrl, {
 	})
 	.then((data) => {
 		allData = data?.record?.filter((item: any) => !item.hide)
-		console.log('data', data)
 	})
 	.catch((error) => {
 		console.error('Error fetching data:', error)
