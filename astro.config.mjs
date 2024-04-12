@@ -14,7 +14,8 @@ import vercel from '@astrojs/vercel/serverless'
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://joeobrienmedia.com',
+	site: 'https://joeybuddy27.github.io',
+	base: 'astro-portfolio',
 	integrations: [
 		expressiveCode(expressiveCodeOptions),
 		react(),
