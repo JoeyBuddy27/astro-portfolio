@@ -13,8 +13,8 @@ import vercel from '@astrojs/vercel/serverless'
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://joeybuddy27.github.io',
-	base: '/astro-portfolio',
+	// site: 'https://joeybuddy27.github.io',
+	// base: '/astro-portfolio',
 	integrations: [
 		expressiveCode(expressiveCodeOptions),
 		react(),
@@ -44,6 +44,7 @@ export default defineConfig({
 	},
 	prefetch: true,
 	output: 'hybrid',
+	outdir: 'dist',
 	adapter: vercel({
 		imageService: true
 	}),
