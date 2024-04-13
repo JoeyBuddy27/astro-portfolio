@@ -7,7 +7,7 @@ export const siteConfig: SiteConfig = {
 	// Meta property used to construct the meta title property, found in src/components/BaseHead.astro L:11
 	title: "Joe O'Brien Media",
 	// Meta property used as the default description meta property
-	description: 'The official Astro Resume Theme',
+	description: 'Software developer portfolio',
 	// HTML lang property, found in src/layouts/Base.astro L:18
 	lang: 'en-GB',
 	// Meta property, found in src/components/BaseHead.astro L:42
@@ -35,6 +35,10 @@ export const menuLinks: Array<{ title: string; path: string }> = [
 	{
 		title: 'Portfolio',
 		path: '/portfolio/'
+	},
+	{
+		title: 'About',
+		path: '/about'
 	}
 ]
 
