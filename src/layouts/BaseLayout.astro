@@ -15,6 +15,10 @@ interface Props {
 const {
 	meta: { articleDate, description = siteConfig.description, ogImage, title }
 } = Astro.props
+
+console.log('description', description);
+console.log('title', title);
+console.log('og', ogImage)
 ---
 
 <html lang={siteConfig.lang} class=''>
