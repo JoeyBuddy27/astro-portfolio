@@ -9,6 +9,10 @@ import SkillLayout from '../components/SkillLayout.astro'
 import { Image } from 'astro:assets'
 import profoPic from '../assets/profo-pic.jpg'
 import { Icon } from 'astro-icon/components'
+import odeonLogo from '../assets/Odeon_logo.jpg'
+import microstrategiesLogo from '../assets/microstrategies.png'
+import golfbreaksLogo from '../assets/golfbreaks.png'
+import ulLogo from '../assets/UL.png'
 
 // TODO: Edit these
 const languages = ['javascript', 'typescript', 'html', 'css']
@@ -51,21 +55,24 @@ const experience: any[] = [
 		role: 'Front End Developer',
 		icon: 'professional',
 		date: 'Aug 2021 - Present',
-		desc: 'Developing customer portal app using Typescript and React JS. \n Maintaining main company website with VUE JS. \n Developing mobile app with React Native & Node JS'
+		desc: 'Developing customer portal app using Typescript and React JS. \n Maintaining main company website with VUE JS. \n Developing mobile app with React Native & Node JS',
+		image: golfbreaksLogo
 	},
 	{
 		location: 'Microstrategies',
 		role: 'Junior Front End Developer',
 		icon: 'professional',
 		date: 'Oct 2020 - July 2021',
-		desc: 'Developing websites for clients, including WooCommerce platforms with payment gateways. \n Working on in-house websites and applications.'
+		desc: 'Developing websites for clients, including WooCommerce platforms with payment gateways. \n Working on in-house websites and applications.',
+		image: microstrategiesLogo
 	},
 	{
 		location: 'ODEON CINEMAS',
 		role: 'Film Booker',
 		icon: 'professional',
 		date: 'Aug 2019 - July 2020',
-		desc: 'Devising bespoke lineups for 11 cinemas in UK/Ireland to maximise revenue. \n Negotiating with film distributors and cinema management. \n Data analysis on box office performance. '
+		desc: 'Devising bespoke lineups for 11 cinemas in UK/Ireland to maximise revenue. \n Negotiating with film distributors and cinema management. \n Data analysis on box office performance.',
+		image: odeonLogo
 	}
 ]
 
@@ -75,14 +82,16 @@ const education = [
 		role: 'Masters in Interactive Media',
 		icon: 'school',
 		date: 'Sept 2014 - Sept 2015',
-		desc: 'Awarded 1.1 honours \n\n Dissertation: Interactive Data Visualization of Irish Road Deaths'
+		desc: 'Awarded 1.1 honours \n\n Dissertation: Interactive Data Visualization of Irish Road Deaths',
+		image: ulLogo
 	},
 	{
 		location: 'University of Limerick',
 		role: 'Bsc Digital Media Design',
 		icon: 'school',
 		date: 'Dec 2015 - Present',
-		desc: 'Awarded 1.1 honours'
+		desc: 'Awarded 1.1 honours',
+		image: ulLogo
 	}
 ]
 ---
@@ -158,7 +167,9 @@ const education = [
 						date={exp.date}
 						useIcon
 						altText={exp.role}
-						imageClass='h-12 w-auto md:-left-8'
+						image={exp.image}
+						imageClass='h-12 w-auto'
+						iconClass='h-12 w-auto md:-left-8'
 					>
 						<ul class='ml-4 list-disc text-muted-foreground'>
 							{exp.desc
@@ -175,17 +186,19 @@ const education = [
 
 		<Section title='Education'>
 			{
-				education.map((exp: any) => (
+				education.map((edu: any) => (
 					<Card
-						heading={exp.role}
-						subheading={exp.location}
-						date={exp.date}
+						heading={edu.role}
+						subheading={edu.location}
+						date={edu.date}
 						useIcon
-						altText={exp.role}
-						imageClass='h-12 w-auto md:-left-8'
+						image={edu.image}
+						altText={edu.role}
+						imageClass='h-12 w-auto'
+						iconClass='h-12 w-auto md:-left-8'
 					>
 						<ul class='ml-4 list-disc text-muted-foreground'>
-							{exp.desc
+							{edu.desc
 								.split('\n')
 								.filter((item: any) => item.trim() !== '')
 								?.map((item: any, index: number) => (
