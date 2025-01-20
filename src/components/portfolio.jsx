@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import ProjectCard from './ProjectCard.tsx'
 import { cn } from '@/utils'
+import portfolioJson from '@/assets/portfolio-json.json'
 
 let originalData = []
 
 const apiKey = '$2a$10$.i6OSz1qYvSb5dL/lQcQq.GbRKV/Wsw7gxMtxCLnH8GZ7JxChtmHS'
 const apiUrl = `https://api.jsonbin.io/v3/b/65eb4a2c1f5677401f3a62df`
+let data = []
 
 try {
 	const response = await fetch(apiUrl, {
@@ -17,10 +19,15 @@ try {
 		}
 	})
 	if (!response.ok) {
+		data = portfolioJson
+		console.log('data', data)
+		originalData = data.filter((item) => !item.hide)
+		console.log('error fetching data', response)
 		throw new Error(`HTTP error! Status: ${response.status}`)
+	} else {
+		data = await response.json()
+		originalData = data.record.filter((item) => !item.hide)
 	}
-	const data = await response.json()
-	originalData = data.record.filter((item) => !item.hide)
 } catch (error) {
 	console.error('Error fetching data:', error)
 }

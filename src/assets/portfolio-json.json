@@ -1,0 +1,242 @@
+[
+	{
+		"title": "Golfbreaks - Customer Portal",
+		"type": "Web",
+		"project": "Work",
+		"link": "https://my.golfbreaks.com",
+		"short": "As part of my work for Golfbreaks, I was a big part in developing our customer portal. This is built with REACT JS. It is a logged-in portal with lots of functionality. The work involved APIs, interactive components and responsive design, as well as complicated business logic.",
+		"image": ["https://i.postimg.cc/VvKqMqpn/SKIP.png"],
+		"alt": ["Golfbreaks event hub"],
+		"tag": ["web"]
+	},
+	{
+		"title": "Golfbreaks - Events Hub",
+		"type": "Web",
+		"project": "Work",
+		"link": "https://golfbreaks.com/en-gb/events",
+		"short": "As part of my work for Golfbreaks, I do a lot of developing on the main website. For this we use NUXT and Vue JS. Events Hub is an entire feature of the website that I built, which includes a checkout process, and lots of nice visual elements also.",
+		"image": ["https://i.postimg.cc/vTY7cqqG/Events-Hub.png"],
+		"alt": ["Golfbreaks event hub"],
+		"tag": ["web"]
+	},
+	{
+		"title": "Drive By Digital ",
+		"type": "Web",
+		"project": "Work",
+		"link": "https://drivebydigital.co.uk",
+		"short": "Developed this website for my company. It includes WooCommerce stores with Stripe payment terminals and custom CSS.",
+		"image": ["https://i.postimg.cc/G2pGg5Rx/DBD1.png", "https://i.postimg.cc/Wp8Bn3jg/neon.png"],
+		"alt": ["Drive By Digital homepage", "Neon store page"],
+		"tag": ["web"]
+	},
+	{
+		"no": 1,
+		"title": "Microstrategies",
+		"type": "Web",
+		"project": "Work",
+		"link": "https://microstrategies.co.uk",
+		"short": "Developed the company website, using Wordpress. It is a clean, simple business website with a number of plugins and custom CSS. ",
+		"image": ["https://i.postimg.cc/HkQwrM3X/microstrategies.png"],
+		"alt": ["Microstrategies homepage"],
+		"tag": ["web"],
+		"hide": true
+	},
+	{
+		"no": 2,
+		"title": "Boxing Laboratory",
+		"type": "Web",
+		"project": "Work",
+		"link": "https://boxinglaboratory.co.uk",
+		"short": "A boxing wordpress website built to client's specifications. Includes booking calendar.",
+		"image": ["https://i.postimg.cc/qvfcBwcp/boxing-lab.png"],
+		"alt": ["Boxing Laboratory homepage"],
+		"tag": ["web"],
+		"hide": true
+	},
+	{
+		"no": 3,
+		"title": "Instant Messenger - MERN",
+		"type": "Web",
+		"project": "Fun",
+		"link": "https://whatsapp-mern-6d5c8.web.app/",
+		"github": "https://github.com/JoeyBuddy27/whatsapp",
+		"short": "Using the MERN stack, this is a real-time chat app similar to WhatsApp. Send messages to Mongo DB and refreshes the page in real-time.",
+		"image": ["https://i.postimg.cc/28LFfMZH/Instant-Messenger1.png"],
+		"alt": ["Instant messenger app - chat room"],
+		"tag": ["web"],
+		"hide": true
+	},
+	{
+		"no": 4,
+		"title": "Joe's Movies - REACT",
+		"type": "Web",
+		"project": "Fun",
+		"link": "https://joes-movies.web.app/",
+		"github": "https://github.com/JoeyBuddy27/joes-movies-react",
+		"short": "Revamped an old website design of mine with REACT JS. This is now a fully responsive SPA, using React-router. It is completely dynamic, pulling the posts and reviews from JSON files. The styling was done with SASS and makes use of CSS Grid and flexbox.",
+		"image": [
+			"https://i.postimg.cc/k47fJsm2/Joes-Movies1.png",
+			"https://i.postimg.cc/kg46WhQQ/Joes-Movies2.png"
+		],
+		"alt": ["Joe's Movies Home Page", "Joe's Movies Custom Banner"],
+		"tag": ["visual", "web"]
+	},
+	{
+		"no": 5,
+		"title": "Amazon - REACT Clone",
+		"type": "Web",
+		"project": "Fun",
+		"link": "https://clone-83740.web.app/",
+		"github": "https://github.com/JoeyBuddy27/Amazon-Clone",
+		"short": "An Amazon clone built with REACT JS. This project includes a responsive design, animations and uses Hooks for state management. It also implements Firebase for database management/authentication and Stripe for a dummy payment at the checkout.",
+		"image": [
+			"https://i.postimg.cc/VNgXRcxN/Amazon1.png",
+			"https://i.postimg.cc/Hn9c9qv2/Amazon2.png"
+		],
+		"alt": ["Amazon home page", "Amazon checkout page"],
+		"tag": ["web"],
+		"hide": true
+	},
+	{
+		"no": 6,
+		"title": "Netflix REACT Clone",
+		"type": "Web",
+		"project": "Fun",
+		"link": "https://netflix-clone-e18e0.web.app/Browse",
+		"github": "https://github.com/JoeyBuddy27/Netflix",
+		"short": "A Netflix front-end clone built with REACT JS. Used free APIs from The Movie Database, and Movie Trailer.",
+		"image": [
+			"https://i.postimg.cc/rsKGsYYw/netflix1.png",
+			"https://i.postimg.cc/wxXmzNxm/netflix2.png"
+		],
+		"alt": ["Netflix banner", "Netflix content info"],
+		"tag": ["web"],
+		"hide": true
+	},
+	{
+		"no": 7,
+		"title": "SlipSpark Logo",
+		"type": "Logo",
+		"project": "Work",
+		"short": "Gaming logo designed for a mate. \n\n Currently used as an Avatar on Twitch Youtube and other gaming platforms, and as an overlay on live streams",
+		"image": ["https://i.ibb.co/mcMHJPW/Slip-Spark1.jpg"],
+		"tag": ["visual"],
+		"alt": ["SlipSpark Logo Final"]
+	},
+	{
+		"no": 8,
+		"title": "Woodstock Logo",
+		"type": "Logo",
+		"project": "Work",
+		"short": "Logo designed for a friend's startup media company. Used for branding on social media, website, business cards, t-shirts.",
+		"image": [
+			"https://i.postimg.cc/sgSc5qfB/Woodstock1.png",
+			"https://i.postimg.cc/4NXhx3nF/Woodstock2.png",
+			"https://i.postimg.cc/Hs38cCyW/Woodstock3.png"
+		],
+		"alt": ["Woodstock Final Logo", "Woodstock Circle", "Woodstock Circle - no text"],
+		"tag": ["visual"]
+	},
+	{
+		"no": 9,
+		"title": "Burger Builder",
+		"type": "Web",
+		"project": "Fun",
+		"short": "Burger Builder Application made with REACT JS. Includes authentication and databases using Firebase. Redux is primarily used for state management.",
+		"link": "http://burgerbuilder.redcastledesign.com/",
+		"github": "https://github.com/JoeyBuddy27/burger-builder/",
+		"image": [
+			"https://i.postimg.cc/Fz8yLg2g/Burger1.png",
+			"https://i.ibb.co/2S547hg/Burger2.png",
+			"https://i.ibb.co/6P3G5z3/Burger3.png"
+		],
+		"alt": ["Burger Builder Home", "Burger Builder Authentication", "Burger Builder Orders"],
+		"tag": ["web"],
+		"hide": true
+	},
+	{
+		"no": 10,
+		"title": "Alternate Movie Posters",
+		"type": "Poster",
+		"project": "Fun",
+		"short": "Alternate movie posters created in Adobe Illustrator. They are minimalist in style.",
+		"image": [
+			"https://i.postimg.cc/SKffv9Mk/Movie-Poster1.png",
+			"https://i.ibb.co/g48hYs3/Movie-Poster2.png",
+			"https://i.ibb.co/tPjKCJy/Movie-Poster3.jpg",
+			"https://i.ibb.co/WKsmyY6/Movie-Poster4.png",
+			"https://i.ibb.co/qDfpHDC/Movie-Poster5.jpg",
+			"https://i.ibb.co/Gk5Zzbj/Movie-Poster6.png"
+		],
+		"alt": [
+			"V For Vendetta Poster",
+			"Scream Poster",
+			"True Romance Poster",
+			"Fight Club Poster",
+			"Dazed and Confused Poster",
+			"Alien Poster"
+		],
+		"tag": ["visual"]
+	},
+	{
+		"no": 11,
+		"title": "ODEON Graphics",
+		"type": "Poster",
+		"project": "Work",
+		"short": "Various graphics and posters made for marketing purposes while working at ODEON cinema Limerick. These were made in Photoshop. ",
+		"image": [
+			"https://i.postimg.cc/NMGkq06T/Odeon-Graphics2.png",
+			"https://i.ibb.co/xjXtdbx/Odeon-Graphics1.png",
+			"https://i.ibb.co/tHpWMCb/Odeon-Graphics3.jpg"
+		],
+		"alt": [
+			"Local marketing visual",
+			"Digital film times",
+			"Local marketing poster Student Tuesday"
+		],
+		"tag": ["visual"]
+	},
+	{
+		"no": 12,
+		"title": "Limerick Jazz Festival",
+		"type": "Web",
+		"project": "Work",
+		"link": "http://limerickjazz.com",
+		"short": "Developed Wordpress site for Limerick Jazz Festival in 2012 and have managed updates and content every year since. Includes custom CSS and plugins.",
+		"image": ["https://i.postimg.cc/02hnMPvR/LJF1.png", "https://i.ibb.co/yfntyLJ/LJF2.png"],
+		"alt": ["LJF Homepage", "LJF Homepage bottom"],
+		"tag": ["web"]
+	},
+	{
+		"no": 13,
+		"title": "Red Castle Design",
+		"type": "Web",
+		"project": "Work",
+		"link": "http://redcastledesign.com",
+		"short": "Single Page business website made with Wordpress. Created as a freelance company for design work in 2015. Includes custom CSS and plugins. ",
+		"image": [
+			"https://i.postimg.cc/658zpTDf/Red-Castle1.png",
+			"https://i.ibb.co/PCvfPXT/Red-Castle2.png"
+		],
+		"alt": ["Red Castle Home Page", "Red Castle services section"],
+		"tag": ["web"],
+		"hide": true
+	},
+	{
+		"no": 14,
+		"title": "Lightroom edits",
+		"type": "Photo",
+		"project": "Fun",
+		"link": "https://www.flickr.com/photos/joedigitalmedia/",
+		"short": "Just a few select shots I've taken on holidays. Edited with Adobe Lightroom. See more on my Flickr page below.",
+		"image": [
+			"https://i.ibb.co/KzCjfmC/Photo1.jpg",
+			"https://i.ibb.co/ys5hzHz/Photo2.jpg",
+			"https://i.ibb.co/4TDLx4B/Photo3.jpg",
+			"https://i.ibb.co/0fw2B3n/Photo4.jpg",
+			"https://i.ibb.co/ZfsYphq/Photo5.jpg"
+		],
+		"alt": ["Budapest 1", "Budapest 2", "Cliffs of Moher 1", "Belfast", "Lagos"],
+		"tag": ["visual"]
+	}
+]
